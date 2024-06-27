@@ -1,9 +1,12 @@
-<<<<<<< HEAD
 package controller
 
-func CreateUser(c *gin.Context) {}
-=======
-package controller
+import (
+	"github.com/esteveseverson/crud-go/src/configuration/rest_err"
+	"github.com/gin-gonic/gin"
+)
 
-func CreateUser(c *gin.Context) {}
->>>>>>> d1ab3d39f55c8a54c6a868e23831d3dc0e22b327
+func CreateUser(c *gin.Context) {
+
+	err := rest_err.NewBadRequestError("Você chamou a rota de forma errada")
+	c.JSON(err.Code, err)
+}
