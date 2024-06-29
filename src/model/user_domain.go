@@ -8,7 +8,7 @@ import (
 type UserDomainInterface interface {
 	GetEmail() string
 	GetPassword() string
-	getAge() int8
+	GetAge() int8
 	GetName() string
 
 	EncryptPassword()
@@ -39,7 +39,7 @@ func (ud *userDomain) GetPassword() string {
 func (ud *userDomain) GetName() string {
 	return ud.name
 }
-func (ud *userDomain) getAge() int8 {
+func (ud *userDomain) GetAge() int8 {
 	return ud.age
 }
 
